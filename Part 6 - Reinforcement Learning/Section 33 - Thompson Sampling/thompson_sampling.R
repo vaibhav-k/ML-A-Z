@@ -14,9 +14,7 @@ for (n in 1:N) {
   ad = 0
   max_random = 0
   for (i in 1:d) {
-    random_beta = rbeta(n = 1,
-                        shape1 = numbers_of_rewards_1[i] + 1,
-                        shape2 = numbers_of_rewards_0[i] + 1)
+    random_beta = rbeta(n = 1, shape1 = numbers_of_rewards_1[i] + 1, shape2 = numbers_of_rewards_0[i] + 1)
     if (random_beta > max_random) {
       max_random = random_beta
       ad = i
@@ -33,8 +31,4 @@ for (n in 1:N) {
 }
 
 # Visualising the results
-hist(ads_selected,
-     col = 'blue',
-     main = 'Histogram of ads selections',
-     xlab = 'Ads',
-     ylab = 'Number of times each ad was selected')
+hist(ads_selected, col = 'blue', main = 'Histogram of ads selections', xlab = 'Ads', ylab = 'Number of times each ad was selected')
