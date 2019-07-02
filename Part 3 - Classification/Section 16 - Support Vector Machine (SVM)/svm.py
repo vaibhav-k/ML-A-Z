@@ -9,7 +9,7 @@ X = dataset.iloc[:, [2, 3]].values
 y = dataset.iloc[:, 4].values
 
 # Splitting the dataset into the Training set and Test set
-from sklearn.cross_validation import train_test_split
+from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
 # Feature Scaling
@@ -38,8 +38,7 @@ plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).re
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green'))(i), label = j)
+    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c = ListedColormap(('red', 'green'))(i), label = j)
 plt.title('SVM (Training set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
@@ -54,8 +53,7 @@ plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).re
 plt.xlim(X1.min(), X1.max())
 plt.ylim(X2.min(), X2.max())
 for i, j in enumerate(np.unique(y_set)):
-    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
-                c = ListedColormap(('red', 'green'))(i), label = j)
+    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c = ListedColormap(('red', 'green'))(i), label = j)
 plt.title('SVM (Test set)')
 plt.xlabel('Age')
 plt.ylabel('Estimated Salary')
