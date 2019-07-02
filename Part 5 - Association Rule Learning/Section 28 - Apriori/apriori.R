@@ -1,5 +1,3 @@
-# Apriori
-
 # Data Preprocessing
 install.packages('arules')
 library(arules)

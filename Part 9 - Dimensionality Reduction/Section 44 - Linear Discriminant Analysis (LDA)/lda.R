@@ -1,5 +1,3 @@
-# LDA
-
 # Importing the dataset
 dataset = read.csv('Wine.csv')
 

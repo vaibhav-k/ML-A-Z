@@ -1,5 +1,3 @@
-# XGBoost
-
 # Importing the dataset
 dataset = read.csv('Churn_Modelling.csv')
 dataset = dataset[4:14]
