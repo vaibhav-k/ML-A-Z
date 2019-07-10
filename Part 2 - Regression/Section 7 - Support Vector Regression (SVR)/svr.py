@@ -28,6 +28,12 @@ regressor.fit(X, y)
 y_pred = regressor.predict(6.5)
 y_pred = sc_y.inverse_transform(y_pred)
 
+# Printing the predictions and the actual 'y' values
+print("The predicted 'y' values are:")
+print(y_pred)
+print("The actual 'y' values are:")
+print(y_test)
+
 # Visualising the SVR results
 plt.scatter(X, y, color = 'red')
 plt.plot(X, regressor.predict(X), color = 'blue')

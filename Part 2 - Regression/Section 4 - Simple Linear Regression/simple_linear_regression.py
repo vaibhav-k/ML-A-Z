@@ -28,6 +28,12 @@ regressor.fit(X_train, y_train)
 # Predicting the Test set results
 y_pred = regressor.predict(X_test)
 
+# Printing the predictions and the actual 'y' values
+print("The predicted 'y' values are:")
+print(y_pred)
+print("The actual 'y' values are:")
+print(y_test)
+
 # Visualising the Training set results
 plt.scatter(X_train, y_train, color = 'red')
 plt.plot(X_train, regressor.predict(X_train), color = 'blue')
