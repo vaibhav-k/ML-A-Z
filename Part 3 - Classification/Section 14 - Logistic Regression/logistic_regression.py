@@ -37,7 +37,7 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
 # Printing the confusion matrix
-print("The confusion Matrix is:")
+print("The confusion matrix is:")
 print(cm)
 
 # Visualising the Training set results
