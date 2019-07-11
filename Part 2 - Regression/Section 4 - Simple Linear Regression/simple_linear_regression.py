@@ -29,9 +29,9 @@ regressor.fit(X_train, y_train)
 y_pred = regressor.predict(X_test)
 
 # Printing the predictions and the actual 'y' values
-print("The predicted 'y' values are:")
+print("The predicted \"y\" values are:")
 print(y_pred)
-print("The actual 'y' values are:")
+print("The actual \"y\" values are:")
 print(y_test)
 
 # Visualising the Training set results
